@@ -49,7 +49,6 @@ class _GridMenuPageState extends State<GridMenuPage> {
             itemBuilder: (context, index) {
               return Container(
                 decoration: BoxDecoration(
-                    color: Colors.indigo,
                     borderRadius: BorderRadius.circular(20.0),
                     image: DecorationImage(
                         image: AssetImage('${Mydata[index].img}'),

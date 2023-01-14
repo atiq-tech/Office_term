@@ -12,11 +12,6 @@ class _SearchOptionState extends State<SearchOption> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      // onChanged: (value) {
-      //   setState(() {
-      //     TravelModel = TravelModel.where((element) => element.contains(value)).toList();
-      //   });
-      // },
       controller: _searchBar,
       obscureText: true,
       decoration: InputDecoration(

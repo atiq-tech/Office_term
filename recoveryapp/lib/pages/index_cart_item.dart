@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:myapp2/additems/add_cart_item.dart';
 import 'package:myapp2/models/travel_model.dart';
 
 class IndexCartItem extends StatefulWidget {
@@ -12,7 +13,7 @@ class IndexCartItem extends StatefulWidget {
 
 class _IndexCartItemState extends State<IndexCartItem> {
   final Mydata = TravelModel.generatedMySourecList();
-  int quantity = 0;
+  int quantity = 1;
   int index = 0;
   int _currentIndex = 0;
   @override
@@ -94,7 +95,7 @@ class _IndexCartItemState extends State<IndexCartItem> {
                         width: 10.0,
                       ),
                       Text(
-                        '$quantity',
+                        quantity.toString().padLeft(2, '0'),
                         style: TextStyle(
                             color: Color.fromARGB(255, 0, 0, 0),
                             fontSize: 18.0,
@@ -124,20 +125,30 @@ class _IndexCartItemState extends State<IndexCartItem> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 70.0, left: 150.0),
-                child: Container(
-                  width: 170.0,
-                  height: 50.0,
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 0, 0, 0),
-                      borderRadius: BorderRadius.circular(50.0)),
-                  child: Center(
-                      child: Text(
-                    'Add to cart',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.w700),
-                  )),
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => AddCartItem(
+                                index: index,
+                              )));
+                    });
+                  },
+                  child: Container(
+                    width: 170.0,
+                    height: 50.0,
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        borderRadius: BorderRadius.circular(50.0)),
+                    child: Center(
+                        child: Text(
+                      'Add to cart',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w700),
+                    )),
+                  ),
                 ),
               ),
             ],

@@ -65,10 +65,6 @@ class _MainPageState extends State<MainPage> {
             onTap: (index) {
               setState(() {
                 _currentIndex = index;
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => CartHome1(
-                //           index: index,
-                //         )));
               });
             },
           ),

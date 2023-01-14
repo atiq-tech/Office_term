@@ -24,17 +24,17 @@ class _MainItemPageState extends State<MainItemPage> {
       backgroundColor: Color.fromARGB(255, 243, 241, 241),
       body: Container(
         padding:
-            EdgeInsets.only(top: 45.0, left: 20.0, right: 20.0, bottom: 10.0),
+            EdgeInsets.only(top: 55.0, left: 20.0, right: 20.0, bottom: 10.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
               SearchOption(),
               SizedBox(
-                height: 20.0,
+                height: 25.0,
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 400.0,
+                height: 360.0,
                 child: ListView.separated(
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
@@ -52,7 +52,7 @@ class _MainItemPageState extends State<MainItemPage> {
                         );
                       },
                       child: Container(
-                        width: 240.0,
+                        width: 200.0,
                         padding: EdgeInsets.only(
                           top: 5,
                         ),
@@ -81,8 +81,8 @@ class _MainItemPageState extends State<MainItemPage> {
                                           });
                                         },
                                         child: Container(
-                                          height: 40,
-                                          width: 40,
+                                          height: 30.0,
+                                          width: 30.0,
                                           decoration: BoxDecoration(
                                             color: Color.fromARGB(
                                                 255, 231, 228, 228),
@@ -103,7 +103,7 @@ class _MainItemPageState extends State<MainItemPage> {
                               ),
                             ),
                             SizedBox(
-                              height: 15,
+                              height: 20.0,
                             ),
                             Expanded(
                                 flex: 2,
@@ -118,27 +118,21 @@ class _MainItemPageState extends State<MainItemPage> {
                                             color: Colors.black,
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w900),
-                                        textAlign: TextAlign.justify,
                                       ),
                                       SizedBox(
-                                        height: 10.0,
+                                        height: 15.0,
                                       ),
                                       Row(
                                         children: [
-                                          Row(
-                                            children: [
-                                              Text(
-                                                "${Mydata[index].price}",
-                                                style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 18.0,
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              ),
-                                            ],
+                                          Text(
+                                            "${Mydata[index].price}",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w600),
                                           ),
                                           SizedBox(
-                                            width: 10.0,
+                                            width: 15.0,
                                           ),
                                           Text(
                                             "${Mydata[index].country}",
@@ -239,7 +233,7 @@ class _MainItemPageState extends State<MainItemPage> {
                     separatorBuilder: (_, index) => SizedBox(
                           width: 20.0,
                         ),
-                    itemCount: 14),
+                    itemCount: Mydata.length),
               ),
             ],
           ),
