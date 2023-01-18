@@ -114,55 +114,50 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.w800),
                 ),
               ),
-              Container(
-                height: 300.0,
-                width: double.infinity,
-                // color: Color.fromARGB(255, 36, 43, 59),
-                child: GridView.builder(
-                    shrinkWrap: true,
-                    // physics: NeverScrollableScrollPhysics(),
-                    itemCount: 6,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        mainAxisSpacing: 15.0,
-                        crossAxisSpacing: 15.0,
-                        childAspectRatio: 4 / 4),
-                    itemBuilder: (context, index) {
-                      return Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(3.0),
-                            border: Border.all(color: Colors.blue)),
-                        child: Column(
-                          children: [
-                            Expanded(
-                                flex: 3,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 184, 196, 221),
-                                    image: DecorationImage(
-                                        image: AssetImage('images/mens.png'),
-                                        fit: BoxFit.cover),
-                                  ),
+              GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: 6,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 15.0,
+                      crossAxisSpacing: 15.0,
+                      childAspectRatio: 4 / 4),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(3.0),
+                          border: Border.all(color: Colors.blue)),
+                      child: Column(
+                        children: [
+                          Expanded(
+                              flex: 3,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 184, 196, 221),
+                                  image: DecorationImage(
+                                      image: AssetImage('images/mens.png'),
+                                      fit: BoxFit.cover),
+                                ),
+                              )),
+                          Expanded(
+                              flex: 1,
+                              child: Container(
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 44, 107, 231),
+                                ),
+                                child: Center(
+                                    child: Text(
+                                  'Mens',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20.0),
                                 )),
-                            Expanded(
-                                flex: 1,
-                                child: Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 44, 107, 231),
-                                  ),
-                                  child: Center(
-                                      child: Text(
-                                    'Mens',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 20.0),
-                                  )),
-                                )),
-                          ],
-                        ),
-                      );
-                    }),
-              ),
+                              )),
+                        ],
+                      ),
+                    );
+                  }),
               SizedBox(
                 height: 10.0,
               ),
@@ -576,197 +571,188 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 10.0,
               ),
-              Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 300.0,
-                  padding: EdgeInsets.only(
-                      top: 10.0, left: 5.0, right: 5.0, bottom: 5.0),
-                  child: GridView.builder(
-                      shrinkWrap: true,
-                      itemCount: 6,
-                      //physics: NeverScrollableScrollPhysics(),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisSpacing: 15.0,
-                          crossAxisSpacing: 15.0,
-                          childAspectRatio: 4 / 7),
-                      itemBuilder: (context, index) {
-                        return Container(
-                          width: 220.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: Column(
-                            children: [
-                              Expanded(
-                                  flex: 4,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: AssetImage('images/cat2.jpg'),
-                                          fit: BoxFit.cover),
-                                      //color: Colors.pink,
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(15.0),
-                                          topRight: Radius.circular(15.0)),
-                                    ),
-                                    child: Stack(
-                                      children: [
-                                        Positioned(
-                                          top: 10,
-                                          right: 10,
-                                          child: InkWell(
-                                            onTap: () {
-                                              setState(() {});
-                                            },
-                                            child: Container(
-                                                height: 20.0,
-                                                width: 60.0,
-                                                decoration: BoxDecoration(
-                                                  color: Color.fromARGB(
-                                                      255, 35, 11, 255),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          3.0),
-                                                ),
-                                                child: Center(
-                                                  child: Text(
-                                                    '30.00%',
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 14.0),
-                                                  ),
-                                                )),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  )),
-                              Expanded(
-                                  flex: 3,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 27, 27, 27),
-                                      borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(15.0),
-                                          bottomRight: Radius.circular(15.0)),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 6.0),
-                                          child: Text(
-                                            'Men`s Pandeing Jacket',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 14.0),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 8.0,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 5.0),
-                                          child: Text(
-                                            'Code:P00005',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 14.0),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 8.0,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 25.0),
-                                          child: Row(
-                                            children: [
-                                              Text(
-                                                '\$1260.00 ',
+              GridView.builder(
+                  shrinkWrap: true,
+                  itemCount: 6,
+                  physics: NeverScrollableScrollPhysics(),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 15.0,
+                      crossAxisSpacing: 15.0,
+                      childAspectRatio: 4 / 7),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 220.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                              flex: 4,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('images/cat2.jpg'),
+                                      fit: BoxFit.cover),
+                                  //color: Colors.pink,
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(15.0),
+                                      topRight: Radius.circular(15.0)),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      top: 10,
+                                      right: 10,
+                                      child: InkWell(
+                                        onTap: () {
+                                          setState(() {});
+                                        },
+                                        child: Container(
+                                            height: 20.0,
+                                            width: 60.0,
+                                            decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 35, 11, 255),
+                                              borderRadius:
+                                                  BorderRadius.circular(3.0),
+                                            ),
+                                            child: Center(
+                                              child: Text(
+                                                '30.00%',
                                                 style: TextStyle(
-                                                    color: Color.fromARGB(
-                                                        255, 221, 90, 73),
+                                                    color: Colors.white,
                                                     fontSize: 14.0),
                                               ),
-                                              Text(
-                                                ' \$1800.00',
-                                                style: TextStyle(
-                                                    decoration: TextDecoration
-                                                        .lineThrough,
-                                                    color: Color.fromARGB(
-                                                        255, 221, 90, 73),
-                                                    fontSize: 14.0),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 10.0,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 16.0),
-                                          child: Row(
-                                            children: [
-                                              Container(
-                                                height: 25.0,
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width /
-                                                    6,
-                                                decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: Colors.red)),
-                                                child: Center(
-                                                  child: Text(
-                                                    'Buy Now',
-                                                    style: TextStyle(
-                                                        color: Color.fromARGB(
-                                                            255, 211, 72, 7),
-                                                        fontSize: 12.0,
-                                                        fontWeight:
-                                                            FontWeight.w800),
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                width: 10.0,
-                                              ),
-                                              Container(
-                                                height: 25.0,
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width /
-                                                    6,
-                                                decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: Colors.blue)),
-                                                child: Center(
-                                                  child: Text(
-                                                    'Add Cart',
-                                                    style: TextStyle(
-                                                        color: Colors.blue,
-                                                        fontSize: 12.0,
-                                                        fontWeight:
-                                                            FontWeight.w800),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        )
-                                      ],
+                                            )),
+                                      ),
                                     ),
-                                  )),
-                            ],
-                          ),
-                        );
-                      })),
+                                  ],
+                                ),
+                              )),
+                          Expanded(
+                              flex: 3,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 27, 27, 27),
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(15.0),
+                                      bottomRight: Radius.circular(15.0)),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 6.0),
+                                      child: Text(
+                                        'Men`s Pandeing Jacket',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 14.0),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 8.0,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5.0),
+                                      child: Text(
+                                        'Code:P00005',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 14.0),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 8.0,
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 25.0),
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            '\$1260.00 ',
+                                            style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    255, 221, 90, 73),
+                                                fontSize: 14.0),
+                                          ),
+                                          Text(
+                                            ' \$1800.00',
+                                            style: TextStyle(
+                                                decoration:
+                                                    TextDecoration.lineThrough,
+                                                color: Color.fromARGB(
+                                                    255, 221, 90, 73),
+                                                fontSize: 14.0),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 16.0),
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            height: 25.0,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                6,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                    color: Colors.red)),
+                                            child: Center(
+                                              child: Text(
+                                                'Buy Now',
+                                                style: TextStyle(
+                                                    color: Color.fromARGB(
+                                                        255, 211, 72, 7),
+                                                    fontSize: 12.0,
+                                                    fontWeight:
+                                                        FontWeight.w800),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 10.0,
+                                          ),
+                                          Container(
+                                            height: 25.0,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                6,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                    color: Colors.blue)),
+                                            child: Center(
+                                              child: Text(
+                                                'Add Cart',
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontSize: 12.0,
+                                                    fontWeight:
+                                                        FontWeight.w800),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )),
+                        ],
+                      ),
+                    );
+                  }),
               SizedBox(
                 height: 10.0,
               ),
@@ -814,197 +800,188 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 10.0,
               ),
-              Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 300.0,
-                  padding: EdgeInsets.only(
-                      top: 10.0, left: 5.0, right: 5.0, bottom: 5.0),
-                  child: GridView.builder(
-                      shrinkWrap: true,
-                      itemCount: 6,
-                      //physics: NeverScrollableScrollPhysics(),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisSpacing: 15.0,
-                          crossAxisSpacing: 15.0,
-                          childAspectRatio: 4 / 7),
-                      itemBuilder: (context, index) {
-                        return Container(
-                          width: 220.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: Column(
-                            children: [
-                              Expanded(
-                                  flex: 4,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: AssetImage('images/cat5.jpg'),
-                                          fit: BoxFit.cover),
-                                      //color: Colors.pink,
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(15.0),
-                                          topRight: Radius.circular(15.0)),
-                                    ),
-                                    child: Stack(
-                                      children: [
-                                        Positioned(
-                                          top: 10,
-                                          right: 10,
-                                          child: InkWell(
-                                            onTap: () {
-                                              setState(() {});
-                                            },
-                                            child: Container(
-                                                height: 20.0,
-                                                width: 60.0,
-                                                decoration: BoxDecoration(
-                                                  color: Color.fromARGB(
-                                                      255, 35, 11, 255),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          3.0),
-                                                ),
-                                                child: Center(
-                                                  child: Text(
-                                                    '30.00%',
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 14.0),
-                                                  ),
-                                                )),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  )),
-                              Expanded(
-                                  flex: 3,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 27, 27, 27),
-                                      borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(15.0),
-                                          bottomRight: Radius.circular(15.0)),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 6.0),
-                                          child: Text(
-                                            'Men`s Pandeing Jacket',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 14.0),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 8.0,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 5.0),
-                                          child: Text(
-                                            'Code:P00005',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 14.0),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 8.0,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 22.0),
-                                          child: Row(
-                                            children: [
-                                              Text(
-                                                '\$1260.00 ',
+              GridView.builder(
+                  shrinkWrap: true,
+                  itemCount: 6,
+                  physics: NeverScrollableScrollPhysics(),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 15.0,
+                      crossAxisSpacing: 15.0,
+                      childAspectRatio: 4 / 7),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 220.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                              flex: 4,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('images/cat5.jpg'),
+                                      fit: BoxFit.cover),
+                                  //color: Colors.pink,
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(15.0),
+                                      topRight: Radius.circular(15.0)),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      top: 10,
+                                      right: 10,
+                                      child: InkWell(
+                                        onTap: () {
+                                          setState(() {});
+                                        },
+                                        child: Container(
+                                            height: 20.0,
+                                            width: 60.0,
+                                            decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 35, 11, 255),
+                                              borderRadius:
+                                                  BorderRadius.circular(3.0),
+                                            ),
+                                            child: Center(
+                                              child: Text(
+                                                '30.00%',
                                                 style: TextStyle(
-                                                    color: Color.fromARGB(
-                                                        255, 221, 90, 73),
+                                                    color: Colors.white,
                                                     fontSize: 14.0),
                                               ),
-                                              Text(
-                                                ' \$1800.00',
-                                                style: TextStyle(
-                                                    decoration: TextDecoration
-                                                        .lineThrough,
-                                                    color: Color.fromARGB(
-                                                        255, 221, 90, 73),
-                                                    fontSize: 14.0),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 10.0,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 16.0),
-                                          child: Row(
-                                            children: [
-                                              Container(
-                                                height: 25.0,
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width /
-                                                    6,
-                                                decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: Colors.red)),
-                                                child: Center(
-                                                  child: Text(
-                                                    'Buy Now',
-                                                    style: TextStyle(
-                                                        color: Color.fromARGB(
-                                                            255, 211, 72, 7),
-                                                        fontSize: 12.0,
-                                                        fontWeight:
-                                                            FontWeight.w800),
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                width: 10.0,
-                                              ),
-                                              Container(
-                                                height: 25.0,
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width /
-                                                    6,
-                                                decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: Colors.blue)),
-                                                child: Center(
-                                                  child: Text(
-                                                    'Add Cart',
-                                                    style: TextStyle(
-                                                        color: Colors.blue,
-                                                        fontSize: 12.0,
-                                                        fontWeight:
-                                                            FontWeight.w800),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        )
-                                      ],
+                                            )),
+                                      ),
                                     ),
-                                  )),
-                            ],
-                          ),
-                        );
-                      })),
+                                  ],
+                                ),
+                              )),
+                          Expanded(
+                              flex: 3,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 27, 27, 27),
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(15.0),
+                                      bottomRight: Radius.circular(15.0)),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 6.0),
+                                      child: Text(
+                                        'Men`s Pandeing Jacket',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 14.0),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 8.0,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5.0),
+                                      child: Text(
+                                        'Code:P00005',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 14.0),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 8.0,
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 22.0),
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            '\$1260.00 ',
+                                            style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    255, 221, 90, 73),
+                                                fontSize: 14.0),
+                                          ),
+                                          Text(
+                                            ' \$1800.00',
+                                            style: TextStyle(
+                                                decoration:
+                                                    TextDecoration.lineThrough,
+                                                color: Color.fromARGB(
+                                                    255, 221, 90, 73),
+                                                fontSize: 14.0),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 16.0),
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            height: 25.0,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                6,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                    color: Colors.red)),
+                                            child: Center(
+                                              child: Text(
+                                                'Buy Now',
+                                                style: TextStyle(
+                                                    color: Color.fromARGB(
+                                                        255, 211, 72, 7),
+                                                    fontSize: 12.0,
+                                                    fontWeight:
+                                                        FontWeight.w800),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 10.0,
+                                          ),
+                                          Container(
+                                            height: 25.0,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                6,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                    color: Colors.blue)),
+                                            child: Center(
+                                              child: Text(
+                                                'Add Cart',
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontSize: 12.0,
+                                                    fontWeight:
+                                                        FontWeight.w800),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )),
+                        ],
+                      ),
+                    );
+                  }),
               SizedBox(
                 height: 10.0,
               ),
